@@ -290,15 +290,15 @@ header .header-content .header-content-inner p {
 
 .section-heading {
     
-    padding-left: 5px;
-    margin-top: 0;
-    margin-bottom: 20px;
+    padding-left: 0px;
+    margin-top: 50px;
+    margin-bottom: 100px;
     font-size: 24px;
 }
 
 .section-title {
 
-    padding-bottom: 50px;
+    padding-bottom: 10px;
 }
 
 .ProPic {
@@ -366,6 +366,7 @@ header .header-content .header-content-inner p {
 .resume {
     padding-top: 20px;
     padding-bottom: 50px;
+    padding-top: 50px;
     margin-right: auto;
     margin-left: auto;
     background-color: #222327;
@@ -374,7 +375,7 @@ header .header-content .header-content-inner p {
 .resume .resume-title {
   font-size: 26px;
   font-weight: 700;
-
+  padding-top: 40px;
   color: #969696;
 }
 
@@ -893,24 +894,28 @@ fieldset[disabled] .btn-default.active {
 }
 
 .btn-primary {
-    border-color: #2d2e34;
-    color: #fff;
-    background-color: #2d2e34;
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
+background-color: #fa6048;
+padding: 12px 28px; 
+border-radius: 6px; text-decoration: none; 
+font-weight: 600; 
+transition: 0.2s;
 }
 
 
-.btn-primary:hover,
+.btn-primary:hover {
+    transform: scale(1.1);
+    color: #fff;
+    text-decoration: none
+}
+
 .btn-primary:focus,
 .btn-primary.focus,
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
-    border-color: rgb(141, 141, 141);
-    color: #ffffff;
-    background-color: rgb(141, 141, 141);
+    border-color: #fff;
+    color: #fff;
+    background-color: #fff;
 }
 
 .btn-primary:active,
@@ -1075,9 +1080,28 @@ img::-moz-selection {
       left: -10%;
     }
   }
-  
 
+  .video-fade-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* THE MAGIC: Keeps the top 60% clear, then smoothly masks to solid dark grey at the bottom */
+    background: linear-gradient(
+        to bottom, 
+        rgba(18, 18, 20, 0) 0%, 
+        rgba(18, 18, 20, 0) 60%, 
+        rgba(18, 18, 20, 1) 100%
+    );
+    
+    pointer-events: none; /* Ensures users can still click links/buttons over the video */
+    z-index: 1;           /* Sits perfectly on top of the raw video element layer */
+}
 
-
-
-  
+/* Ensure the video itself sits below the overlay layer internally */
+#myVideo {
+    position: absolute;
+    z-index: 0;
+}
