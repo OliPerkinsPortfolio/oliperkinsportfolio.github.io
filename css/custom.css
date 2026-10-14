@@ -275,6 +275,7 @@ header .header-content .header-content-inner p {
     display: block;
     margin-right: auto;
     margin-left: auto;
+    z-index: -1;
   }
 
   .spinner-wrapper {
@@ -293,6 +294,11 @@ header .header-content .header-content-inner p {
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 24px;
+}
+
+.section-title {
+
+    padding-bottom: 50px;
 }
 
 .ProPic {
@@ -336,8 +342,8 @@ header .header-content .header-content-inner p {
 .intro {
 
     background-color: #2d2e34;
-    padding-top: 60px;
-    padding-bottom: 10px;
+    padding-top: 40px;
+
     text-align: center;
     margin-right: auto;
     margin-left: auto;
@@ -358,6 +364,10 @@ header .header-content .header-content-inner p {
 }
 
 .resume {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    margin-right: auto;
+    margin-left: auto;
     background-color: #222327;
 }
 
@@ -376,7 +386,8 @@ header .header-content .header-content-inner p {
 }
 
 .resume .resume-item h4 {
-  line-height: 18px;
+  padding-top:10px;
+  line-height: 1px;
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
@@ -386,7 +397,6 @@ header .header-content .header-content-inner p {
 
 .resume .resume-item h5 {
   font-size: 16px;
-;
   padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
@@ -500,8 +510,8 @@ header .header-content .header-content-inner p {
 
   .boxHead {
     overflow: hidden;
-      margin: auto;
- width: max-content;
+    margin: auto;
+    width: max-content;
     padding: 10px;
     background-color: #20202050;
     border-radius: 15px;
@@ -524,7 +534,10 @@ width: max-content;
 }
 
 
-
+.col-lg-4, .col-lg-3, .col-lg-5, .col-lg-6  {
+    z-index: 1 ;
+        padding-bottom: 40px;
+}
 
 .content {
   overflow: hidden;
@@ -551,6 +564,7 @@ width: max-content;
 	padding: 0px 0 0px;
     color: #fff;
     background-color: #222327;
+    z-index: 1 ;
 }
 
 .sketchfab-embed-wrapper {
@@ -571,31 +585,54 @@ width: max-content;
   .dropdown {
     position: relative;
     display: inline-block;
-    transition: all .5s ease;
+    transition: all 1s ease;
   }
   
-  .dropdown-content {
-    display: none;
-    position: relative;
-    background-color: #212125;
-    min-width: 320px;
-    border-radius: 10px;
-    z-index: 4;
-    padding: 8px;
-  }
+
+  /* 1. Main Dropdown Content Box */
+.dropdown-content {
+  opacity: 0;                
+  visibility: hidden;        
+  position: absolute;
+  left: 0;                   /* Anchors the box alignment */
+  background-color: #212125 !important; /* Forces your dark background solid color */
+  min-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6);
+  margin-top: 8px;
+  padding: 15px 20px; 
+  z-index: 5;
   
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.2s ease, visibility 0.3s ease;
+}
+
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;                
+  visibility: visible;     
+  position: absolute;  
+  transform: translateY(0);  
+  background-color: #212125 ;
+  z-index: 5 ;
+}
+
+
+.dropdown-content a {
+  display: block;
+  color: #ffffff;
+  padding: 8px 0;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover { 
+  color: #cccccc; 
+}
   
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  .dropdown:hover .dropbtn {background-color: #813125;}
+
+.dropdown:hover .dropbtn {
+  background-color: #813125;
+}
 
 .zoom {
 
@@ -701,8 +738,13 @@ width: max-content;
 .text-light {
     color: #969696;
     list-style: none;
-
     text-align: left;
+}
+
+.text-center {
+    color: #969696;
+    list-style: none;
+    text-align: center;
 }
 
 .navbar-default {

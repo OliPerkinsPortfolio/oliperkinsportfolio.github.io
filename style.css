@@ -41,8 +41,6 @@ Last Update: Feb 22, 2019
 
 /* :: 01.0 Reboot CSS */
 
-
-
 /* :: 8.0 Hero CSS */
 .welcome-area {
   position: relative;
@@ -170,6 +168,7 @@ Last Update: Feb 22, 2019
     .footer-content .social-info a:hover, .footer-content .social-info a:focus {
       color: #fc6060; }
 
+
 /* :: 10.0 Follow CSS */
 .single-instagram-item {
   position: relative;
@@ -228,4 +227,3 @@ Last Update: Feb 22, 2019
 .instagram-gallery-single-item:hover .instagram-hover-content .zoom-img {
   margin-top: 0;
   opacity: 1; }
-
