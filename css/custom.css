@@ -578,9 +578,9 @@ width: max-content;
 .dropbtn {
     background-color: #fa6048;
     color: white;
-    padding: 10px;
-    font-size: 15px;
-    border-radius: 25px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 10px;
   }
   
   .dropdown {
@@ -896,7 +896,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary {
 background-color: #fa6048;
 padding: 12px 28px; 
-border-radius: 6px; text-decoration: none; 
+border-radius: 6px; 
+text-decoration: none; 
 font-weight: 600; 
 transition: 0.2s;
 }
