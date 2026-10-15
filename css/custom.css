@@ -595,8 +595,8 @@ width: max-content;
   opacity: 0;                
   visibility: hidden;        
   position: absolute;
-  left: 0;                   /* Anchors the box alignment */
-  background-color: #212125 !important; /* Forces your dark background solid color */
+  left: 0;                  
+  background-color: #2d2e34 !important; 
   min-width: 600px;
   border-radius: 10px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6);
