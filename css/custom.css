@@ -564,6 +564,11 @@ header .header-content .header-content-inner p {
   position: relative;
 }
 
+.resume .resume-item img {
+  max-width: 100%;
+  height: auto;
+}
+
 .resume .resume-item h4 {
   padding-top:10px;
   line-height: 1px;
@@ -787,6 +792,14 @@ width: max-content;
 }
 
 @media only screen and (max-width: 767px) {
+  .row.justify-content-center {
+    flex-wrap: wrap;
+  }
+
+  .row.justify-content-center > div {
+    min-width: 0;
+  }
+
   .dropdown-content {
     box-sizing: border-box;
     width: calc(100vw - 80px);
