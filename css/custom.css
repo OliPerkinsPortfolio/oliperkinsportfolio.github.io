@@ -786,6 +786,14 @@ width: max-content;
   transition: opacity 0.3s ease, transform 0.2s ease, visibility 0.3s ease;
 }
 
+@media only screen and (max-width: 767px) {
+  .dropdown-content {
+    box-sizing: border-box;
+    width: calc(100vw - 80px);
+    min-width: 0;
+    max-width: 600px;
+  }
+}
 
 .dropdown:hover .dropdown-content {
   opacity: 1;                
