@@ -830,7 +830,7 @@ width: max-content;
   .dropdown-content {
     box-sizing: border-box;
     width: calc(100vw - 80px);
-    min-width: 0;
+    min-width: 300px;
   }
 }
 
@@ -1306,6 +1306,31 @@ img::-moz-selection {
       left: -10%;
     }
   }
+
+
+/* Center and scale logos for desktop */
+.logo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-container img {
+    width: 500px; 
+    height: auto;
+}
+
+/* Mobile styles for Logos */
+@media only screen and (max-width: 767px) {
+    .row.justify-content-center {
+        flex-wrap: wrap;
+    }
+
+    .logo-container img {
+        width: 300px; 
+    }
+}
+
+
 
   .video-fade-overlay {
     position: absolute;
